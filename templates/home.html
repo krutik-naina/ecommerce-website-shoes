@@ -1,0 +1,856 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Own Shoes</title>
+
+  <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+      .h4
+      {
+        margin-top: 130px;
+        margin-left: 80px;
+      }
+      .fnt
+      {
+        font-size: 40px;
+        margin-top: 170px;
+        margin-left: 80px;
+      }
+      .fnt1
+      {
+        font-size: 30px;
+        margin-top: 5px;
+        color: blueviolet;
+        margin-left: 80px;
+      }
+      #img
+      {
+        width: 500px;
+        height: 500px;
+        margin: 5px;
+        margin-top: 0px;
+        margin-left: 0px;
+      }
+
+      #img2
+        {
+             width: 300px;
+             height: 280px;
+             margin-left: 50px;
+             cursor: pointer;
+             border-radius: 10px;
+      }
+         
+        #img2:hover
+        
+        {
+        transform: scale(1.1); 
+        }
+
+
+        .about .row{
+          display: flex;
+          align-items: center;
+          gap:2rem;
+          flex-wrap: wrap;
+          padding:2rem 0;
+          padding-bottom: 3rem;
+         }
+
+         #img3
+         {
+          width: 200px;
+          height: 180px;
+         }
+
+.about .row .video-container{
+    flex:1 1 40rem;
+    position: relative;
+}
+
+.about .row .video-container video{
+    width:100%;
+    border:1.5rem solid #fff;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    height: 100%;
+    object-fit: cover;
+}
+
+.about .row .video-container h3{
+    position: absolute;
+    top:50%; transform: translateY(-50%);
+    font-size: 3rem;
+    background:#fff;
+    width:100%;
+    padding:1rem 2rem;
+    text-align: center;
+    mix-blend-mode: screen;
+}
+
+.about .row .content{
+    flex:1 1 40rem;
+}
+
+.about .row .content h3{
+    font-size: 3rem;
+    color:#333;
+}
+
+.about .row .content p{
+    font-size: 1.5rem;
+    color:#999;
+    padding:.5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
+}
+
+
+      .btn1
+      {
+        background-image: radial-gradient(#027882 ,#024045 );
+        color: white;
+        border-color: #024045;
+        border-radius: 30px;
+        width: 120px;
+        height: 32px;
+        margin-left: 80px;
+      }
+
+      .btn3
+      {
+        background-image: radial-gradient(#027882 ,#024045 );
+        color: white;
+        border-color: #024045;
+        border-radius: 30px;
+        width: 120px;
+        height: 32px;
+        margin-left: 40px;
+      }
+    
+      #jum
+      {
+        width: 1150px;
+      }
+
+      #footer
+      {
+           width: 1300px;
+           height: 200px;
+           color: white;
+           background-color: black;
+      }
+      #lnk
+      {
+        color: red;
+        margin-top: 50px;
+
+      }
+      #p
+      {
+          margin-top: 50px;
+      }
+      .map
+      {
+        margin-top: 10px;
+        height: 160px;
+        width: 420px;
+      }
+      #img-back
+      {
+         width: 1100px;
+         height: 250px;
+      }
+      .service
+      {
+        background-color: white;
+        margin-top: -120px;
+        width: 350px;
+        border-radius: 10px;
+      }
+
+      #btn1{
+        margin-left: 200px;
+        width: 200px;
+        color: white;
+        border-radius: 20px;
+        background-image: radial-gradient(#027882 ,#024045 );
+       }
+
+
+      a
+    {
+         display: inline-block;
+         text-decoration: none;
+         color: white;
+     }
+
+     .footer-dark 
+     {
+       padding:50px 0;
+       color:#f0f9ff;
+       background-color:#282d32;
+     }
+
+     .footer-dark h3 
+      {
+        margin-top:0;
+        margin-bottom:12px;
+        font-weight:bold;
+        font-size:16px;
+      }
+
+      .footer-dark ul 
+      {
+        padding:0;
+        list-style:none;
+        line-height:1.6;
+        font-size:14px;
+        margin-bottom:0;
+      }
+
+.footer-dark ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.6;
+}
+
+.footer-dark ul a:hover {
+  opacity:0.8;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item:not(.social) {
+    text-align:center;
+    padding-bottom:20px;
+  }
+}
+
+.footer-dark .item.text {
+  margin-bottom:36px;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item.text {
+    margin-bottom:0;
+  }
+}
+
+.footer-dark .item.text p {
+  opacity:0.6;
+  margin-bottom:0;
+}
+
+.footer-dark .item.social {
+  text-align:center;
+}
+
+@media (max-width:991px) {
+  .footer-dark .item.social {
+    text-align:center;
+    margin-top:20px;
+  }
+}
+
+.footer-dark .item.social > a {
+  font-size:20px;
+  width:36px;
+  height:36px;
+  line-height:36px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+  margin:0 8px;
+  color:#fff;
+  opacity:0.75;
+}
+
+.footer-dark .item.social > a:hover {
+  opacity:0.9;
+}
+
+.footer-dark .copyright {
+  text-align:center;
+  padding-top:24px;
+  opacity:0.3;
+  font-size:13px;
+  margin-bottom:0;
+}
+
+   #myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  background-image: radial-gradient(#027882 ,#024045 );
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+   #myBtn:hover {
+  background-color: #027882;
+}
+
+  #Modal-Product
+  {
+    margin-Top: 150px;
+  }
+  #about-section
+  {
+    margin-top: 50px;
+  }
+  #oder-img
+  {
+      margin-top: -80px;
+      margin-left: 50px;
+  }
+
+
+  Skip Results Iframe
+EDIT ON
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 10px;
+}
+
+.spinner-wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: #f8f6f6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .spinner {
+    position: relative;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+  }
+  
+  .spinner::before,
+  .spinner:after{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+  }
+  
+  .spinner:before {
+    width: 100%;
+    height: 100%;
+    background-image:linear-gradient(90deg, #c59d5f 0%,#515151 100% );
+    animation: spin .5s infinite linear;
+  }
+  
+  .spinner:after {
+    width: 90%;
+    height: 90%;
+    background-color: #f3f0f0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+   /* user rating css */
+
+   * {
+  box-sizing: border-box;
+}
+
+
+.heading {
+  font-size: 25px;
+  margin-right: 25px;
+}
+
+.fa {
+  font-size: 25px;
+}
+
+.checked {
+  color: orange;
+}
+
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-top:10px;
+}
+
+.middle {
+  margin-top:10px;
+  float: left;
+  width: 70%;
+}
+
+/* Place text to the right */
+.right {
+  text-align: right;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 60%; height: 18px; background-color: #04AA6D;}
+.bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 400px) {
+  .side, .middle {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+}
+
+  
+    </style>
+  
+  {% include 'header.html' %}
+  
+</head>
+<body>
+
+<!--  Loder Effect  -->
+
+  <div class="spinner-wrapper">
+    <div class="spinner">
+    </div>
+  </div>
+   
+   <script type="text/javascript">
+     let spinnerWrapper = document.querySelector('.spinner-wrapper');
+
+      window.addEventListener('load', function(){
+      spinnerWrapper.style.display= 'none';
+});
+   </script>
+<!--  Loder Effect  End-->
+
+  <!-- Home Images  -->   
+  <section id="Home">
+   <div class="container-fluid">
+    <div class="col-sm-6 " >
+            <p class="fnt">Discover the greatest <br> shoes collection at the</p>
+
+            <p class="fnt1">Most affordable price !!!</p>
+
+            <button class="btn1" data-toggle="tooltip" data-placement="bottom" title="Shopping!">Get strated</button>
+
+      </div>
+      <div class="col-sm-6">
+
+            <img class="img-responsive" src="/media/upload/bucca-bucci-black.png" id="img"> 
+     </div>
+   </div>
+</section>
+
+
+<!-- about section starts  -->
+
+    <section class="about" id="About">
+     <div class="container">
+    <h1 class="heading"> <center><span style="color: #027882;"> About </span><b> Us </b></center></h1>
+      <div class="col-sm-6">
+    <div class="row">
+        <div class="video-container">
+            <video src="/media/upload/shopping_vd1.mp4" loop autoplay muted></video>
+          </div>
+        </div>
+      </div>
+
+        <div class="content" id="about-section">
+                <div class="col-sm-6">
+            <h1>Why choose us?</h1>
+            <p style="font-size: 20px;">We will try to provide all your products in good and best quality. You will not be scammed by our website. This web site of mine is trustworthy.</p>
+            <p></p>
+            <button class="btn1">learn more</button>
+         </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- about section ends -->
+
+
+
+  <!-- Shoes Images  -->   
+
+ 
+     <div class="container-fluid" id="Shoes">
+
+      <h1><center>Shoes <b style="color: #027882;"> Best Prise </b></center></h1>
+
+      <div class="col-md-4 col-sm-6 col-xd-12">
+    <a data-toggle="modal" data-target="#myModal"><img class="img-responsive" id="img2" src="/media/upload/puma-red.png" alt="puma-red"><br></a>
+    <h3><center>Puma Red</center></h3>
+    </div>
+
+    <div class="col-md-4 col-sm-6 col-xd-12">
+    <a data-toggle="modal" data-target="#second"><img class="img-responsive" id="img2" src="/media/upload/red-tape-sneraker.png" alt="red-tape-sneraker"><br></a>
+    <h3> <center>Red Tape Sneraker</center></h3>
+      </div>
+
+    <div class="col-md-4 col-sm-6 col-xd-12">
+    <a data-toggle="modal" data-target="#third"><img class="img-responsive" id="img2" src="/media/upload/bucca-bucci-black.png" alt="bucca-bucci-black"><br></a>
+     <h3><center>Bucca Bucci Black</center></h3>
+      </div>
+
+      <div class="col-md-4 col-sm-6 col-xd-12">
+    <a data-toggle="modal" data-target="#four"><img class="img-responsive" id="img2" src="/media/upload/centrino-green.png" alt="centrino-green"><br></a>
+    <h3><center>Centrino Green</center></h3>
+    </div>
+
+    <div class="col-md-4 col-sm-6 col-xd-12">
+    <a data-toggle="modal" data-target="#five"><img class="img-responsive" id="img2" src="/media/upload/global-rich-white.png" alt="global-rich-white"><br></a>
+     <h3><center>Global Rich White</center></h3>
+      </div>
+
+    <div class="col-md-4 col-sm-6 col-xd-12">
+    <a data-toggle="modal" data-target="#six"><img class="img-responsive" id="img2" src="/media/upload/bacca-bucci.png" alt="bacca-bucci"><br></a>
+    <h3> <center>Bacca Bucci</center></h3>
+      </div>    
+     </div><br><br><br>
+
+
+     <!-- shoes end -->
+
+     <!-- Container (Contact Section) -->
+<div id="Contact" class="container">
+  <h3 class="text-center"><h1 style="color: #027882;"><center>Contact</center></h1></h3>
+  <p class="text-center"><em><center>We love our fans!</center></em></p>
+
+    <div class="row">
+    <div class="col-md-6">
+       <img class="img-responsive" src="/media/upload/OnlineShopping.jpg" alt="Oder-Images" width="60%" id="oder-img">
+    </div>
+    <div class="col-md-6">
+        <form name="f1" action = "/Contacts/"  enctype="multipart/form-data" onsubmit = "return validation()" method = "POST">  
+    {% csrf_token %}
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="cname" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="cemail" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="ccomment" placeholder="Comment" rows="5"></textarea>
+      <br>
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <input type="submit" class="btn pull-right btn-success" type="submit" style="width:100px;   background-image: radial-gradient(#027882 ,#024045 );" title="Send!" value="Send">
+        </div>
+      </div>
+    </form>
+    </div>
+  </div>
+  <br>
+</div>
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content" id="Modal-Product">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><center> <b>Best</b><b style="color: #027882;"> Affordable Price!! </b></center></h4>
+      </div>
+      <div class="modal-body">
+    <div class="col-sm-6 col-xd-12">
+      <img class="img-responsive" id="img3" src="{{ product.image.url }}" alt="puma-red"><br></a> 
+      </div>
+
+  <!-- Inforamtion -->
+      
+    <div class="col-sm-6 col-xd-12">
+      {% for product in products %}
+        <h3>{{ product.products }}</h3>
+        <h4><b>${{ product.price }}</b> &nbsp &nbsp <b style="color:orange;">50% OFF </b></h4>
+        <h5>Include all Taxes</h5>
+       <span><h4>Color</h4> <h5 style="color:red;"><b>Red</b></h5></span>
+        <button class="btn3" title="Buy product!"><a href="{% url 'cart:add_to_cart' product.id %}">Buy</a></button>
+        </div>
+        {% endfor %}
+      </div> 
+
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+<!-- Modal End -->
+
+
+<!-- Modal second-->
+<div id="second" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content" id="Modal-Product">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><center> <b>Best</b><b style="color: #027882;"> Affordable Price!! </b></center></h4>
+      </div>
+      <div class="modal-body">
+    <div class="col-sm-6 col-xd-12">
+      <img class="img-responsive" id="img3" src="/media/upload/red-tape-sneraker.png" alt="puma-red"><br></a> 
+      </div>
+
+  <!-- Inforamtion -->
+      
+    <div class="col-sm-6 col-xd-12">
+        <h3>Red Tape Sneraker</h3>
+        <h4><b>₹ 2200 </b> &nbsp &nbsp <b style="color:orange;">30% OFF </b></h4>
+        <h5>Include all Taxes</h5>
+       <span><h4>Color</h4> <h5><b>White</b></h5></span>
+       <button class="btn3" title="Buy product!">Buy</button>
+      </div> 
+
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- Modal End -->
+
+<!-- Modal third-->
+<div id="third" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content" id="Modal-Product">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><center> <b>Best</b><b style="color: #027882;"> Affordable Price!! </b></center></h4>
+      </div>
+      <div class="modal-body">
+    <div class="col-sm-6 col-xd-12">
+      <img class="img-responsive" id="img3" src="/media/upload/bucca-bucci-black.png" alt="puma-red"><br></a> 
+      </div>
+
+  <!-- Inforamtion -->
+      
+    <div class="col-sm-6 col-xd-12">
+        <h3>Bucca Bucci Black</h3>
+        <h4><b>₹ 5000 </b> &nbsp &nbsp <b style="color:orange;">10% OFF </b></h4>
+        <h5>Include all Taxes</h5>
+       <span><h4>Color</h4> <h5><b>Black</b></h5></span>
+       <button class="btn3" title="Buy product!">Buy</button>
+      </div> 
+
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- Modal End -->
+
+<!-- Modal fourth-->
+<div id="four" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content" id="Modal-Product">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><center> <b>Best</b><b style="color: #027882;"> Affordable Price!! </b></center></h4>
+      </div>
+      <div class="modal-body">
+    <div class="col-sm-6 col-xd-12">
+      <img class="img-responsive" id="img3" src="/media/upload/centrino-green.png" alt="centrino-green"><br></a> 
+      </div>
+
+  <!-- Inforamtion -->
+      
+    <div clacss="col-sm-6 col-xd-12">
+        <h3>Centrino Green</h3>
+        <h4><b>₹ 3500 </b> &nbsp &nbsp <b style="color:orange;">5% OFF </b></h4>
+        <h5>Include all Taxes</h5>
+       <span><h4>Color</h4> <h5><b style="color:grey;">Grey</b></h5></span>
+       <button class="btn3" title="Buy product!">Buy</button>
+      </div> 
+
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- Modal End -->
+
+
+<!-- Modal fifth-->
+<div id="five" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content" id="Modal-Product">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><center> <b>Best</b><b style="color: #027882;"> Affordable Price!! </b></center></h4>
+      </div>
+      <div class="modal-body">
+    <div class="col-sm-6 col-xd-12">
+      <img class="img-responsive" id="img3" src="/media/upload/global-rich-white.png" alt="centrino-green"><br></a> 
+      </div>
+
+  <!-- Inforamtion -->
+      
+    <div clacss="col-sm-6 col-xd-12">
+        <h3>Global Rich White</h3>
+        <h4><b>₹ 4000 </b> &nbsp &nbsp <b style="color:orange;">20% OFF </b></h4>
+        <h5>Include all Taxes</h5>
+       <span><h4>Color</h4> <h5><b>White</b></h5></span>
+       <button class="btn3" title="Buy product!">Buy</button>
+      </div> 
+
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- Modal End -->
+
+
+<!-- Modal six-->
+<div id="six" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content" id="Modal-Product">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><center> <b>Best</b><b style="color: #027882;"> Affordable Price!! </b></center></h4>
+      </div>
+      <div class="modal-body">
+    <div class="col-sm-6 col-xd-12">
+      <img class="img-responsive" id="img3" src="/media/upload/bacca-bucci.png" alt="bacca-bucci"><br></a> 
+      </div>
+
+  <!-- Inforamtion -->
+      
+    <div clacss="col-sm-6 col-xd-12">
+        <h3>Bacca Bucci Dark</h3>
+        <h4><b>₹ 2000 </b> &nbsp &nbsp <b style="color:orange;">55% OFF </b></h4>
+        <h5>Include all Taxes</h5>
+       <span><h4>Color</h4> <h5><b>Dark</b></h5></span>
+       <button class="btn3" title="Buy product!">Buy</button>
+      </div> 
+
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- Modal End -->
+
+<!-- Top Button Start -->
+
+<button onclick="topFunction()" id="myBtn" title="Go to top"><span class="glyphicon glyphicon glyphicon-arrow-up"></span></button>
+
+<!-- Top Button End -->
+
+
+<script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+</script>
+{% include 'footer.html' %}
+
+</body>
+</html>
