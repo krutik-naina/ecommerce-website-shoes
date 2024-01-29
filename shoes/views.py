@@ -32,7 +32,7 @@ def signupafter(request):
 	epassword = (request.POST["epassword"])
 	res = Customer( ename = ename, email = email, epassword = epassword)
 	res.save()
-	return HttpResponse("Data Insert")
+	return render(request,"signupbefore.html")
 
 def loginafter(request):
 	ename = (request.POST["ename"])
@@ -62,13 +62,13 @@ def delete(request,product):
 	empdata.delete()
 	return HttpResponseRedirect('/addcart/')
 
-def Contacts(request):
+def Contact(request):
 	cname = (request.POST["cname"])
 	cemail = (request.POST["cemail"])
 	ccomment = (request.POST["ccomment"])
 	res = Contacts( cname = cname, cemail = cemail, ccomment = ccomment)
 	res.save()
-	return HttpResponse("Thank you")
+	return HttpResponseRedirect('/home/')
 
 def product_list(request):
     products = Product.objects.all()

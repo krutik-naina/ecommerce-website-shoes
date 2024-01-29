@@ -463,9 +463,9 @@ html{
   {% include 'header.html' %}
   
 </head>
-<body>
+<body oncontextmenu="disableRightClick(event)">
 
-<!--  Loder Effect  -->
+<!--  spinner Effect  -->
 
   <div class="spinner-wrapper">
     <div class="spinner">
@@ -479,7 +479,8 @@ html{
       spinnerWrapper.style.display= 'none';
 });
    </script>
-<!--  Loder Effect  End-->
+   
+<!--  spinner Effect  End-->
 
   <!-- Home Images  -->   
   <section id="Home">
@@ -489,7 +490,11 @@ html{
 
             <p class="fnt1">Most affordable price !!!</p>
 
-            <button class="btn1" data-toggle="tooltip" data-placement="bottom" title="Shopping!">Get strated</button>
+            <button class="btn1" data-toggle="tooltip" data-placement="bottom" title="Shopping!">
+              <a href="#Shoes" style="text-decoration: none;
+              display: inline-block; 
+              color: white;">Get strated</a>
+            </button>
 
       </div>
       <div class="col-sm-6">
@@ -518,7 +523,10 @@ html{
             <h1>Why choose us?</h1>
             <p style="font-size: 20px;">We will try to provide all your products in good and best quality. You will not be scammed by our website. This web site of mine is trustworthy.</p>
             <p></p>
-            <button class="btn1">learn more</button>
+            <button class="btn1">
+              <a href="#Contact" style="text-decoration: none;
+              display: inline-block; 
+              color: white;">Contact us</a></button>
          </div>
         </div>
       </div>
@@ -580,7 +588,7 @@ html{
        <img class="img-responsive" src="/media/upload/OnlineShopping.jpg" alt="Oder-Images" width="60%" id="oder-img">
     </div>
     <div class="col-md-6">
-        <form name="f1" action = "/Contacts/"  enctype="multipart/form-data" onsubmit = "return validation()" method = "POST">  
+        <form name="f1" action = "/Contact/"  enctype="multipart/form-data" onsubmit = "return validation()" method = "POST">  
     {% csrf_token %}
       <div class="row">
         <div class="col-sm-6 form-group">
@@ -594,7 +602,7 @@ html{
       <br>
       <div class="row">
         <div class="col-md-12 form-group">
-          <input type="submit" class="btn pull-right btn-success" type="submit" style="width:100px;   background-image: radial-gradient(#027882 ,#024045 );" title="Send!" value="Send">
+          <input type="submit" class="btn pull-right btn-success"  type="submit" style="width:100px;   background-image: radial-gradient(#027882 ,#024045 );" onclick="return confirms()" title="Send!" value="Send">
         </div>
       </div>
     </form>
@@ -602,6 +610,13 @@ html{
   </div>
   <br>
 </div>
+
+<script>
+  function confirms()
+      {
+       return  confirm ("Your message send!");
+      } 
+</script>
 
 
 <!-- Modal -->
@@ -622,9 +637,9 @@ html{
   <!-- Inforamtion -->
       
     <div class="col-sm-6 col-xd-12">
-      {% for product in products %}
-        <h3>{{ product.products }}</h3>
-        <h4><b>${{ product.price }}</b> &nbsp &nbsp <b style="color:orange;">50% OFF </b></h4>
+      {% for products in product %}
+        <h3>{{ products.products }}</h3>
+        <h4><b>${{ products.price }}</b> &nbsp &nbsp <b style="color:orange;">50% OFF </b></h4>
         <h5>Include all Taxes</h5>
        <span><h4>Color</h4> <h5 style="color:red;"><b>Red</b></h5></span>
         <button class="btn3" title="Buy product!"><a href="{% url 'cart:add_to_cart' product.id %}">Buy</a></button>
@@ -681,7 +696,7 @@ html{
 
 <!-- Modal third-->
 <div id="third" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+  <div clsass="modal-dialog">
 
     <!-- Modal content-->
     <div class="modal-content" id="Modal-Product">
@@ -847,6 +862,14 @@ function scrollFunction() {
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+}
+
+function disableRightClick(event) {
+  if (event.button == 2) {
+    event.preventDefault(); // Prevent the default right-click behavior
+    alert("Right click disabled!");
+    return false;
+  }
 }
 
 </script>

@@ -31,7 +31,7 @@ urlpatterns = [
     path('addcart/',views.addcart),
     path('delete/<str:product>',views.delete),
     path('video/',views.video),
-    path('Contacts/',views.Contacts),
+    path('Contact/',views.Contact),
     path('ordertarking/',views.ordertarking),
 
 
